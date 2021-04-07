@@ -21,7 +21,6 @@ Begin VB.Form Form1
       Height          =   1095
       Left            =   960
       TabIndex        =   1
-      Text            =   "Text2"
       Top             =   1800
       Width           =   2415
    End
@@ -29,7 +28,7 @@ Begin VB.Form Form1
       Height          =   975
       Left            =   960
       TabIndex        =   0
-      Text            =   "Text1"
+      Text            =   "请输入月份"
       Top             =   120
       Width           =   2415
    End
@@ -43,12 +42,14 @@ Private Sub Command1_Click()
 a = Text1.Text
 Select Case Val(a)
 Case Is <= 3
-Text2.Text = "第一季度"
+Text2.Text = "第1季度"
 Case Is <= 6
 Text2.Text = "第2季度"
 Case Is <= 9
 Text2.Text = "第3季度"
 Case Is <= 12
 Text2.Text = "第4季度"
+Case Else
+Text2.Text = "ERROR"
 End Select
 End Sub
